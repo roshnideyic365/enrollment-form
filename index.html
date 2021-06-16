@@ -1,0 +1,148 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form name="submit-google-sheet" method="post">
+        <input type="text" name="Name" id="name" placeholder="Enter name"><br>
+        <input type="email" name="Email ID" id="email" placeholder="Enter valid email"><br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyTEF_leAZPXOdsPcOMJDIKZCweI0eMHUOpoHryh-CGhUfeMaCMmEysWO0eXwu45u4t/exec'
+            const form = document.forms['submit-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank You! We Will Contact You Soon."))
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enrollment Form</title>
+	<style>
+    body
+    {
+      background-image: url("https://www.gateacademy.shop/assets/v3/base/images/explore-course/pd_gd_course.jpg");
+       
+       background-size:cover;
+    }
+    form{
+        width: 70%;
+    margin: 30px ;
+    border: 2px solid white;
+    padding:20px;
+    box-shadow: 1px 1px 8px yellow;
+    }
+    div
+    {
+      color: white;
+    }
+    article
+    {
+      display:flex;
+      justify-content: center;
+      font-size: 25px;
+    }
+    header
+    {
+      color: cyan;
+      padding: 10px 10px 10px 10px;
+      text-align:center;
+      margin:30px;
+    }
+    input[type=text],input[type=number],input[type=email],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+      border: 2px solid cyan;
+  border-radius: 4px;
+}
+    textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid cyan;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+      button
+    {
+      background-color: cyan;
+      border: none;
+      color: black;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width:100%;
+    }
+	</style>
+</head>
+<body>
+ <div>
+	<header>
+    <h1 id="title"><u>ENROLLMENT FORM</u></h1>
+		<p id="description"><i><strong>Please register below and avail all of our courses</strong></i></p>
+	</header>
+  <article>
+	<form id="survey-form" name="submit-google-sheet" method="post">
+    
+    <label id="name-label" for="name">Name:</label>
+    <br>
+  		<input required type="text" id="name" name="Name" placeholder="Enter your name">
+    <br><br>
+    
+  	<label id="email-label" for="email">Email:</label>
+    <br>
+  		<input required type="email" id="email" name="Email ID" placeholder="Enter your email">
+    <br><br>
+    
+    <label id="number-label" for="number">Phone (optional):</label>
+    <br>
+  		<input type="number" id="number" name="Phone" placeholder="Enter mobile number">
+    <br><br>
+    
+    <label id="dropdown-label" for="email">Course:</label>
+    <br>
+  		<select id="dropdown" placeholder="Select any one" name="Course">
+    <option value="Course">--Enter Course--</option>
+     <option value="Web development">Web development</option>
+     <option value="Machine Learning">Machine Learning</option>
+     <option value="Ethical Hacking">Ethical Hacking</option>
+    </select>
+    <br><br>
+    <button type="submit" id="submit" value="Submit"><strong>Submit</strong></button>
+    
+</form>
+    </article>
+<br><br>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyTEF_leAZPXOdsPcOMJDIKZCweI0eMHUOpoHryh-CGhUfeMaCMmEysWO0eXwu45u4t/exec'
+        const form = document.forms['submit-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank You! We Will Contact You Soon."))
+            .catch(error => console.error('Error!', error.message))
+        })
+</script>
+</body>
+</html>

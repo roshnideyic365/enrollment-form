@@ -1,0 +1,26 @@
+h1
+{
+    color:rgb(255, 0, 76);
+}
+form 
+{
+    width: 50%;
+    margin: 30px ;
+    border: 2px solid red;
+    padding:20px;
+    box-shadow: 1px 1px 8px black;
+}
+input
+{
+    padding:5px;
+    margin: 2px;
+    border-radius:2px;
+}
+#submit
+{
+    padding:5px;
+    margin: 5px;
+    border-radius:2px;
+    background-color: green;
+    color: white;
+}
